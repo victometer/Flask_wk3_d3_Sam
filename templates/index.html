@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+</head>
+<body> 
+    <ul> 
+    {% for order in order_for_html %}
+    <li> <p>{{order.customer_name}}, {{order.order_date}}, {{order.quantity}}</p> 
+    <a href="http://localhost:4999/{{loop.index0}}"> Click here for {{order.customer_name}}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2> More extensions </h2>
+    
+
+
+<p> {{ another_order }} </p>
+</body>
+</html>
